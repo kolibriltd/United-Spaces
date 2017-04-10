@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="loginScreen">
+<head>
+    <meta charset="utf-8">
+    <style>
+   .loginButton {
+    background: white;
+    box-shadow: none;
+    border:1px solid white;
+    outline:0;
+    opacity: 1;
+   }
+   .input
+   {
+   box-shadow:none;
+   border:1px solid #ff0000;
+   padding-left:10px; 
+   padding-top:5px;
+   padding-bottom:5px;
+   font-size:100%;
+   }
+   .loginButtonDark {
+    background: white;
+    box-shadow: none;
+    border:1px solid white;
+    outline:0;
+    opacity: 0.5;
+   }
+  </style>
+</head>
+<body>
+    <div ng-controller="loginController" align="center" ng-style="{ 'position': 'absolute','top': '50%','left': '50%','transform': 'translateX(-50%) translateY(-50%)'}">
+    <p><img ng-src="img/logo.png" width="200" height="120" ></p>
+        <p> <input id="username" ng-model="modelUser.username" type="text" placeholder="Username" class="input" size="30"></p>
+        <p><input id="password" ng-model="modelPassword.password" type="password" placeholder="Password" class="input" size="30"></p>
+        <button id="loginbutton" ng-click="clickMouse()" class="loginButton" ><img ng-src="img/login.png"  width="125" height="125"/></button>
+         </div>
+    <script src="js/lib/angular.min.js"></script>
+    <script type="text/javascript">
+angular.module('loginScreen', []);
+    </script>
+    <script src="js/controllers/loginController.js"></script>
+</body>
+</html>
