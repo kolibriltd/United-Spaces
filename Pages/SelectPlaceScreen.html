@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body>
+       <div ng-style="{ 'position': 'absolute','top': '30%','left': '50%','transform': 'translateX(-50%) translateY(-30%)'}">
+        <img class="arenaKeysAsq " ng-src="img/PickArena/keys_asq.png">
+    </div>
+     <div align="center" ng-style="{ 'position': 'absolute','top': '50%','left': '50%','transform': 'translateX(-50%) translateY(-40%)', 'height': '200px', 'width': '100%'}">
+        <button id="Malmo" class="arenaButton" ><img ng-src="img/PickArena/keys_3.png"/></button>
+        <button id="Stockholm" ng-click="clickMouseStockholm()" class="arenaButton" ><img ng-src="img/PickArena/keys_1.png"/></button>
+        <button id="Goteborg" class="arenaButton" ><img ng-src="img/PickArena/keys_2.png"/></button>
+     </div>
+     <button class="uslogo" ng-click="clickMouse()"><img src="img/PickArena/US_logo.png"/></button>
+</body>
+</html>
