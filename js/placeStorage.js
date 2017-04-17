@@ -7,3 +7,9 @@ spaceApp.service('placeStorage', function () {
 spaceApp.service('getInfoPlace', function() {
     this.infoPlace = "null";
 });
+spaceApp.factory('cache', function ($cacheFactory) {
+	return $cacheFactory('MyCache', {});
+});
+
+
+

@@ -12,24 +12,28 @@
     	padding-left-right: 100px
    }
    #table-scroll {
-   	height: 300px;
-    overflow: auto;
-    width: 70%;
-    margin: 30% auto 20% auto;
-    position: relative;
+  		 height:250px;
+	  overflow:auto;  
+	  margin-top:20%;
+	}
+
+	.nu-table-body {
+    overflow-y:auto;
+    max-height:500px;
 	}
   </style>
 </head>
 <body>
 	<div align="center" ng-style="{ 'position': 'absolute','top': '20%','left': '50%','transform': 'translateX(-50%) translateY(-50%)'}">
-		<img ng-src="img/HomeScreen/selectedCoub.png" width="120" height="120" >
+		<img ng-src="img/HomeScreen/selectedCoub.png" ng-click="clickMouse()" width="120" height="120" >
 		<img ng-src="img/HomeScreen/notselectedCoub.png" width="120" height="120" >
 		<img ng-src="img/HomeScreen/notselectedCoub.png" width="120" height="120" >
 	</div>
-   <div id="table-scroll" align="center">
+
+	<div id="table-scroll" align="center">
   	   <table> 
         <tbody ng-repeat="booking in bookings">
-        	<tr> <td>{{booking.start | date:'HH:mm'}}</td>  <td>{{booking.end | date:'HH:mm' }}</td> <td> {{booking.firmIds[0]}} </td> <td> {{booking.attendees.length}} </td> <td>roomId: {{booking.roomId}}</td> </tr>
+        	<tr> <td><font color="red">Start: </font> {{booking.start | date:'HH:mm'}}</td>  <td><font color="red">End: </font> {{booking.end | date:'HH:mm' }}</td> <td><font color="red">Name Firm: </font>   {{ getNameFirm(booking.firmIds[0]) }} </td> <td> <font color="red">Peoples: </font>  {{booking.attendees.length}} </td> <td> <font color="red">Name Room: </font>  {{getNameRoom(booking.roomId)}} </td> </tr>
          </tbody>
     </table>
   </div>

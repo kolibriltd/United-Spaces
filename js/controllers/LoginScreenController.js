@@ -7,7 +7,6 @@ spaceApp.controller('LoginScreenController', function($scope, $http, $cookieStor
 	var password ="";
 	var loginButton= angular.element( document.querySelector( '#loginbutton' ) ); 
 	$scope.visibilityTest = false;
-	//alert( "your token save in cookie: " + $cookieStore.get('token'));
 	$scope.clickMouse = function ()
 	{
 		user = $scope.modelUser;
