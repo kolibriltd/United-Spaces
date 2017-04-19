@@ -4,9 +4,6 @@ spaceApp.service('placeStorage', function () {
         _placeId: '0'
     };
 });
-spaceApp.service('getInfoPlace', function() {
-    this.infoPlace = "null";
-});
 spaceApp.factory('cache', function ($cacheFactory) {
 	return $cacheFactory('MyCache', {});
 });

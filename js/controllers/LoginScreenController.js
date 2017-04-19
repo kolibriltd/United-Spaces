@@ -1,4 +1,4 @@
-var spaceApp = angular.module('spaceApp', ['ngRoute', 'ngCookies' ])
+var spaceApp = angular.module('spaceApp', ['ngRoute', 'ngCookies', 'ngStorage' ])
 spaceApp.controller('LoginScreenController', function($scope, $http, $cookieStore) 
 {
 	var modelUser = this;

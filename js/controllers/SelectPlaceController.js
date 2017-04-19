@@ -1,10 +1,8 @@
-spaceApp.controller('SelectPlaceController', function($scope, $http, $cacheFactory, placeStorage) 
+spaceApp.controller('SelectPlaceController', function($scope, $http, $cacheFactory, $localStorage) 
 {
-	$scope.placeStorage = placeStorage;
 	$scope.clickMouseStockholm = function ()
 	{
-		placeStorage.placeInfo._placeName = 'Stockholm';
-		placeStorage.placeInfo._placeId = '3010001';
+		localStorage.setItem("SelectPlaceId", "3010001")
 		location.href= '#/HomeScreen';
 	};
 });

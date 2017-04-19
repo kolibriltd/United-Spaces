@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='spaceApp'>
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/app.css" />
+  <style>
+   .layer1 {
+    	margin-top: 30% /* Отступ снизу */
+   }
+   .textStyle {
+    	padding-left: 100px ,
+    	padding-left-right: 100px
+   }
+   #table-scroll {
+  		 height:250px;
+	  overflow:auto;  
+	  margin-top:20%;
+	}
+
+	.nu-table-body {
+    overflow-y:auto;
+    max-height:500px;
+	}
+  </style>
+</head>
+<body>
+	<div align="center" ng-style="{ 'position': 'absolute','top': '20%','left': '50%','transform': 'translateX(-50%) translateY(-50%)'}">
+		<img ng-src="img/HomeScreen/selectedCoub.png" width="120" height="120" >
+		<img ng-src="img/HomeScreen/notselectedCoub.png" ng-click="clickMouseMeeting()" width="120" height="120" >
+		<img ng-src="img/HomeScreen/notselectedCoub.png" ng-click="clickMouseInventory()" width="120" height="120" >
+	</div>
+	<div id="table-scroll" align="center">
+  	   <table> 
+        <tbody ng-repeat="booking in bookings">
+        	<tr ng-show="todayShow(booking.start, booking.status)"> 
+          <td> Start: <font style="{{ReturnTextColor(booking.status)}}"> {{booking.start | date:'HH:mm'}}           </font></td>  
+          <td> End: <font style="{{ReturnTextColor(booking.status)}}"> {{booking.end | date:'HH:mm' }}              </font></td> 
+          <td> Name Firm: <font style="{{ReturnTextColor(booking.status)}}"> {{ getNameFirm(booking.firmIds[0]) }}  </font></td> 
+          <td> Peoples: <font style="{{ReturnTextColor(booking.status)}}"> {{booking.attendees.length}}             </font></td> 
+          <td> Name Room: <font style="{{ReturnTextColor(booking.status)}}"> {{getNameRoom(booking.roomId)}}        </font> 
+          <img ng-src="img/HomeScreen/editIcon.png" ng-click="clickMouseEditBooking(booking)" width="25" height="25" >   </td> </tr>
+         </tbody>
+    </table>
+  </div>
+</body>
+</html>

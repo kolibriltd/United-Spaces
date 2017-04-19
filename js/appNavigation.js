@@ -11,8 +11,23 @@ spaceApp.config(function($routeProvider){
         });
         $routeProvider.when('/HomeScreen',
         {
-            templateUrl:'Pages/HomeScreen.html',
-            controller:'HomeScreenController'
+            templateUrl:'Pages/HomeScreen_Home.html',
+            controller:'HomeScreenController_Home'
+        });
+        $routeProvider.when('/HomeScreen_Meetings',
+        {
+            templateUrl:'Pages/HomeScreen_Meetings.html',
+            controller:'HomeScreenController_Meetings'
+        });
+        $routeProvider.when('/HomeScreen_Inventory',
+        {
+            templateUrl:'Pages/HomeScreen_Inventory.html',
+            controller:'HomeScreenController_Inventory'
+        });
+        $routeProvider.when('/EditBooking',
+        {
+            templateUrl:'Pages/EditBookingScreen.html',
+            controller:'EditBookingController'
         });
         $routeProvider.otherwise({redirectTo: '/LoginScreen'});
 });

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* { font-size: 100%; font-family: 'Lato'; }
+
 .uslogo {position: absolute; border: none; top: 87%; left: 3%; border: none; background: white; width: 100px; height: 100px; }
 .uslogo img {width: 100%; }
 
@@ -8,5 +12,7 @@
 .arenaKeysAsq { width: 70%; height: auto;  display: block; margin: 0 auto}
 .arenaButton { background: url("../img/PickArena/path.png") no-repeat; background-size: cover; background-position: center center;
  border: none; width: 180px; height: 180px; ; }
+.inventoryButton { background: url("../img/HomeScreen_Inventory/redIcon.png") no-repeat; background-size: cover; background-position: center center;
+ border: none; width: 80px; height: 80px; ; }
 .arenaButton :hover { cursor: pointer; }
 .arenaButton img { width: 60%; height: auto;}

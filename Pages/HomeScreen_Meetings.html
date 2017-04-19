@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='spaceApp'>
+<head>
+    <title>Meetings</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/app.css" />
+  <style>
+   .layer1 {
+    	margin-top: 30% /* Отступ снизу */
+   }
+   .textStyle {
+    	padding-left: 100px ,
+    	padding-left-right: 100px
+   }
+   #table-scroll {
+  		 height:250px;
+	  overflow:auto;  
+	  margin-top:20%;
+	}
+
+	.nu-table-body {
+    overflow-y:auto;
+    max-height:500px;
+	}
+  </style>
+</head>
+<body>
+	<div align="center" ng-style="{ 'position': 'absolute','top': '20%','left': '50%','transform': 'translateX(-50%) translateY(-50%)'}">
+		<img ng-src="img/HomeScreen/notselectedCoub.png" ng-click="clickMouseHome()" width="120" height="120" >
+		<img ng-src="img/HomeScreen/selectedCoub.png" width="120" height="120" >
+		<img ng-src="img/HomeScreen/notselectedCoub.png" ng-click="clickMouseInventory()" width="120" height="120" >
+	</div>
+  тут эт, короч дата тип митингов нахуй
+</body>
+</html>
